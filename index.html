@@ -132,27 +132,23 @@
       opacity: 0;
     }
   }
-
-  /* subtle glow effect */
   .glow {
     text-shadow: 0 0 20px #fff, 0 0 40px #ff7eb3;
   }
 </style>
 </head>
 <body>
-
 <div id="container">
-  <button id="revealBtn">Энэ дээр дараад үз</button>
-  <h1 id="message" class="glow">Чамайг бодохоор бүх зүйл илүү утгатай болдог</h1>
-  <p id="submsg">Чамтай байх цаг хугацаа хэт хурдан өнгөрдөг 💫</p>
-  <p id="question" class="glow">Надад боломж байгаа юу? 💕</p>
+  <button id="revealBtn">Touch here</button>
+  <h1 id="message" class="glow">Өнөөдрийг хүртэл хийж ирсэн тэнэг зүйлсэд намайг уучлаарай бас худлаа ярьж байсанд🙇‍♂️ </h1>
+  <p id="submsg">Мөхөс би таны өмнө түмэн буруутай🚶‍♀️‍➡️🧎‍♂️</p>
+  <p id="question" class="glow">Намайг уучлах уу?</p>
   <div id="answer-buttons">
-    <button class="yes-btn" id="yesBtn">Байж магадгүй</button>
-    <button class="no-btn" id="noBtn">Мээдкү байхгүй дээ</button>
+    <button class="yes-btn" id="yesBtn">За яахав бодож үзье</button>
+    <button class="no-btn" id="noBtn">Үгүй ээ</button>
   </div>
   <p id="final-message" class="glow"></p>
 </div>
-
 <script>
   const btn = document.getElementById("revealBtn");
   const message = document.getElementById("message");
@@ -162,33 +158,23 @@
   const yesBtn = document.getElementById("yesBtn");
   const noBtn = document.getElementById("noBtn");
   const finalMessage = document.getElementById("final-message");
-
-  // IMPORTANT: Replace this with your actual email address
   const YOUR_EMAIL = "davkadavka617@gmail.com";
-
   btn.addEventListener("click", () => {
     btn.style.display = "none";
-
-    // show first message
     setTimeout(() => {
       message.classList.add("show");
     }, 800);
-
-    // show sub message
     setTimeout(() => {
       submsg.classList.add("show");
     }, 3000);
-
     // show question
     setTimeout(() => {
       question.classList.add("show");
     }, 5000);
-
     // show answer buttons
     setTimeout(() => {
       answerButtons.classList.add("show");
     }, 6500);
-
     // start heart animation
     setInterval(() => {
       const heart = document.createElement("div");
@@ -198,19 +184,16 @@
       heart.style.left = Math.random() * window.innerWidth + "px";
       heart.style.top = window.innerHeight + "px";
       heart.style.fontSize = Math.random() * 20 + 20 + "px";
-
       setTimeout(() => {
         heart.remove();
       }, 6000);
     }, 250);
   });
-
-  // Handle Yes button
   yesBtn.addEventListener("click", () => {
     answerButtons.style.display = "none";
     question.style.display = "none";
     
-    finalMessage.innerHTML = "💖";
+    finalMessage.innerHTML = "Зааааааааа";
     finalMessage.classList.add("show");
 
     // Send email notification
